@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-int* prime_factors(int x, int& size) {//算数基本定理参数int x,size作为返回数组的长度
+int* prime_factors(int x, int& size) {//算数基本定理:一个整数n可以被拆分成素数的乘积
+//参数int x,size作为返回数组的长度
 
     int* a = new int[x];  // 使用 new 动态分配数组
     int cnt = 0;
