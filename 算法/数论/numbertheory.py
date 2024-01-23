@@ -27,3 +27,18 @@ def prime_factors(n):
             divisor += 1
 
     return factors#返回值为数组
+
+
+def kadane(arr):
+    """
+    使用Kadane算法计算给定数组中最大子数组和。
+    :param arr: 输入的整数数组
+    :return: 数组中最大子数组的和
+    """
+    if not arr:
+        return 0
+    cmax = gmax = arr[0]
+    for i in range(1, len(arr)):
+        cmax = max(arr[i], cmax + arr[i])
+        gmax = max(gmax, cmax)
+    return gmax
