@@ -15,3 +15,6 @@
 
 
 [枚举](https://github.com/Z-Es-0/Algorithm-learning-and-communication/blob/main/%E7%AE%97%E6%B3%95/%E6%9E%9A%E4%B8%BE/%E5%AD%90%E9%9B%86%E6%9E%9A%E4%B8%BE.md)
+
+
+[搜索](https://github.com/Z-Es-0/Algorithm-learning-and-communication/blob/main/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2/%E6%90%9C%E7%B4%A2.md)
