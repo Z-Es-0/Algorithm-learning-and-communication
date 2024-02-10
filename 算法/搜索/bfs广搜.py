@@ -16,7 +16,7 @@ def bfs(ans, q, n, m, pan):
         op += 1
         size = q.qsize()  # 获取当前层的节点数
         for _ in range(size):
-            w = q.get()
+            w = q.get()#出队列
             for i in pan:
                 r = pand(w, i)
                 if check(r, n, m) and ans[r[0]][r[1]] == 0 and r!=(0,0):
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     n, m, x, y = map(int, input().split())
     x, y = x - 1, y - 1
     q.put((x, y))
-    ans = [[0 for _ in range(m)] for _ in range(n)]
+    ans = [[0 for _ in range(m)] for _ in range(n)]#兼任记录数组
     pan = [(1, 0), (0, 1), (-1, 0), (0, -1)]
     bfs(ans, q, n, m, pan)
     for i in ans:
