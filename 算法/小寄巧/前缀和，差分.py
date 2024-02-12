@@ -4,7 +4,7 @@ o=0
 for i in s:
     o+=i
     g.append(o)
-print(g)
+print(g)#前缀和
 
 lst=s[0]
 diff=[s[0]]
@@ -13,6 +13,7 @@ for i in range(1,len(s)):
 print(diff)
 
 def cafen(s):
+    '''差分数组'''
     lst=s[0]
     diff=[s[0]]
     for i in range(1,len(s)):
