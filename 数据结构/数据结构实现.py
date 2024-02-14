@@ -26,3 +26,21 @@ class Stack:#栈
 
     def update_long(self):
         self.long = len(self.lst)
+
+
+
+#查并集
+class DisjointSet:
+    def __init__(self, n):
+        self.parent = [i for i in range(n+5)]#多开点数组
+
+    def find(self, x):#查询函数
+        if self.parent[x] != x:#路径压缩
+            self.parent[x] = self.find(self.parent[x])
+        return self.parent[x]
+
+    def union(self, x, y):#合并函数
+        rootX = self.find(x)
+        rootY = self.find(y)
+        if rootX != rootY:
+            self.parent[rootX] = rootY
