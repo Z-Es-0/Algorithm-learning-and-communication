@@ -58,3 +58,12 @@ def C(n, m):#计算组合数
     if n == m or m == 0:
         return 1
     return C(n-1, m-1) + C(n-1, m)
+
+
+def gcd(a, b):#最大公约数
+    while b:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):#最小公倍数
+    return a * b // gcd(a, b)
