@@ -81,3 +81,10 @@ class Queue:
 
     def get_size(self):
         return self.size
+    
+
+#二叉树，节点类
+class Node:#节点
+    def __init__(self,a,b):
+        self.left=a
+        self.right=b
