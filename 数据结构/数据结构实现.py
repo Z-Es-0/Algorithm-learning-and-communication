@@ -1,6 +1,9 @@
 #数据结构的实现
+#抽象数据类型
+
+
 class Stack:#栈
-    def __init__(self, lst=None):
+    def __init__(self, lst=None):#构造函数
         if lst is None:
             lst = []
         self.lst = lst
