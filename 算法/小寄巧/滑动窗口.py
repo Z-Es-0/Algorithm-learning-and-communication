@@ -11,5 +11,4 @@ def fin(a, n):
             sum -= a[left]
             left += 1
         max_len = max(max_len, right - left + 1)  # 每次在移动left指针后，如果sum小于n，更新max_len。
-
     return max_len
