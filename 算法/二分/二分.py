@@ -3,7 +3,7 @@ def binary_search(arr, target):
     r = len(arr) - 1  # 右边界
     while l <= r:
         mid = l + (r - l) // 2  # 中间位置
-        print(f"Left: {l}, Right: {r}, Middle: {mid}, Middle Value: {arr[mid]}")  # 打印当前的左、右边界和中间值
+        #print(f"Left: {l}, Right: {r}, Middle: {mid}, Middle Value: {arr[mid]}")  # 打印当前的左、右边界和中间值
         if arr[mid] == target:
             return mid  # 找到目标，返回索引
         elif arr[mid] < target:
