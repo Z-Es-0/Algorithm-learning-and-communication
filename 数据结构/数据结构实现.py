@@ -37,10 +37,20 @@ class DisjointSet:
     def __init__(self, n):
         self.parent = [i for i in range(n+5)]#多开点数组
 
-    def find(self, x):#查询函数
-        if self.parent[x] != x:#路径压缩
-            self.parent[x] = self.find(self.parent[x])
-        return self.parent[x]
+    def find(self, x):
+        
+        root = x
+        # 先找到根节点
+        while self.parent[root] != root:
+            root = self.parent[root]
+
+        # 路径压缩，将路径上的所有节点直接指向根节点
+        while self.parent[x] != root:
+            next_node = self.parent[x]
+            self.parent[x] = root
+            x = next_node
+
+        return root
 
     def union(self, x, y):#合并函数
         rootX = self.find(x)
