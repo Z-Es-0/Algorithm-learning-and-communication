@@ -16,3 +16,6 @@ def binary_search(arr, target):
 import bisect
 就可以直接用bisect.bisect()函数进行二分查找
 但是二分答案还得自己手搓'''
+
+
+
