@@ -11,3 +11,8 @@ def EulerSieve(n):  # n为筛选的范围上限
             if i % p == 0:  # 关键步骤：保证了每个合数只会被其最小的素因子筛除
                 break
     return prime
+
+n = 1000
+lis = EulerSieve(n)
+for i in lis:
+    print(i, end = ' ')
