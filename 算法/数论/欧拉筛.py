@@ -12,7 +12,7 @@ def EulerSieve(n):  # n为筛选的范围上限
                 break
     return prime
 
-n = 1000
+n = 200
 lis = EulerSieve(n)
 for i in lis:
     print(i, end = ' ')
