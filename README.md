@@ -1,7 +1,12 @@
+<!--
+ * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @Date: 2024-01-28 20:03:21
+ * @LastEditors: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @LastEditTime: 2024-08-03 21:48:22
+ * @FilePath: \Algorithm-learning-and-communication\README.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 # Algorithm-learning-and-communication
-
-这里放个大牛的codeforces库的链接;
-[codeforces](https://github.com/EndlessCheng/codeforces-go "灵茶山艾府 💭💡🎈")
 
 
 
@@ -18,3 +23,7 @@
 
 
 [搜索](https://github.com/Z-Es-0/Algorithm-learning-and-communication/blob/main/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2/%E6%90%9C%E7%B4%A2.md)
+
+[dp](https://github.com/Z-Es-0/Basic-Algorithm-Notes/tree/main/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92DP)
+
+[图论](https://github.com/Z-Es-0/Basic-Algorithm-Notes/tree/main/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA)
