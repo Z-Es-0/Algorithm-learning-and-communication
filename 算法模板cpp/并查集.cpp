@@ -1,4 +1,20 @@
 /*
+ * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @Date: 2024-08-03 20:45:20
+ * @LastEditors: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @LastEditTime: 2024-08-23 19:17:44
+ * @FilePath: \Algorithm-learning-and-communication\算法模板cpp\并查集.cpp
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+/*
+ * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @Date: 2024-08-03 20:45:20
+ * @LastEditors: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @LastEditTime: 2024-08-23 19:15:59
+ * @FilePath: \Algorithm-learning-and-communication\算法模板cpp\并查集.cpp
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+/*
  * 
  * 　　┏┓　　　┏┓+ +
  * 　┏┛┻━━━┛┻┓ + +
@@ -34,13 +50,17 @@
  * @FilePath: \Algorithm-learning-and-communication\算法模板cpp\并查集.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-#include <vector>
-#include <numeric> // for std::iota
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long 
+#define endl "\n"
+#define lowbit(x) (x&(-x))
+
 
 class UnionFind {
 private:
-    std::vector<int> parent;  // 用于存储每个元素的父节点
-    std::vector<int> rank;    // 用于存储每个元素的秩（树的高度）
+    vector<int> parent;  // 用于存储每个元素的父节点
+    vector<int> rank;    // 用于存储每个元素的秩（树的高度）
     int count;                // 用于存储家族的数量
 
 public:

@@ -1,4 +1,9 @@
 #include <bits/stdc++.h>
+using namespace std;
+#define int long long 
+#define endl "\n"
+#define lowbit(x) (x&(-x))
+
 
 //维护固定长度为k区间的区间最小值；
 class MonotonicQueue {
