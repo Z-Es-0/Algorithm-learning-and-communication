@@ -4,11 +4,13 @@ using namespace std;
 #define N 100110
 #define MOD (1e9 + 7)
 int n, m, s[N];
-int st[17][N];
 
+
+
+int st[17][N]; // 范围适用于 2*10^5
 void buildST() {
     for (int i = 0; i < n; ++i) {
-        st[0][i] = s[i];
+        st[0][i] = s[i]; // 对哪个数组构建st表？
     }
     for (int j = 1; (1 << j) <= n; ++j) {
         for (int i = 0; (i + (1 << j)) <= n; ++i) {
