@@ -1,0 +1,84 @@
+<!--
+ * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @Date: 2024-08-29 15:21:00
+ * @LastEditors: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @LastEditTime: 2024-08-29 15:26:39
+ * @FilePath: \Algorithm-learning-and-communication\24暑假集训\暑假\8-30,md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+[构造](https://codeforces.com/contest/1497/problem/C2)
+
+## 方案
+
+考虑选k-3个1；
+
+剩下的瞎写，即对于奇数可以选 1, (a-1)/2,(a-1)/2;
+
+对于偶数：
+
+if a%4 ==0;可以 a/2,a/4,a/4;
+
+if a%3 ==0; 可以 a/3,a/3,a/3
+
+其他的我们选 2, (a-2)/2,(a-2)/2;
+
+## code
+
+```cpp
+/*
+ * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @Date: 2024-08-23 19:12:19
+ * @LastEditors: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @LastEditTime: 2024-08-28 19:49:03
+ * @FilePath: \练习cpp\main.cpp
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+#define lowbit(x) (x & (-x))
+#define N 200005
+#define MOD (1e9+7)
+int t,n,k;
+
+
+void dfs(int a,int b){
+    if (a%2!=0){
+        cout<<1<<' '<<(a-1)/2<<' '<<(a-1)/2<<endl;
+    }
+    else{
+        if ((a-2)/2%2 ==0 || (a-2)/2==1){
+            cout<<2<<' '<<(a-2)/2<<' '<<(a-2)/2<<endl;
+        }
+        else if (a%3 ==0){
+            cout<<a/3<<' '<<a/3<<' '<<a/3<<endl;
+        }
+        else if (a%4 ==0){
+            cout<<a/2<<' '<<a/4<<' '<<a/4 <<endl;
+        }
+    }
+}
+void solve(){
+    cin>>n>>k;
+    if (n%k ==0){
+        for (int i = 0; i < k; ++i) {
+            cout<<n/k<<' ';
+        }
+        cout<<endl;
+        return;
+    }
+    for (int i = 0; i < k-3; ++i) {
+        cout<<1<<' ';
+    }
+    dfs(n-(k-3),3);
+}
+signed main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cin>>t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
+```
