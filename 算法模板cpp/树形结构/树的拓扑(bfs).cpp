@@ -4,7 +4,7 @@
  * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
  * @Date: 2024-08-24 22:43:41
  * @LastEditors: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
- * @LastEditTime: 2024-08-24 22:45:23
+ * @LastEditTime: 2024-08-29 19:41:31
  * @FilePath: \Algorithm-learning-and-communication\算法模板cpp\树的拓扑(bfs).cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -19,7 +19,7 @@ int t,n,g[N];
 char s[N];
 
 vector<int>top;
-int dpp[N],dps[N];
+
 int co;
 vector<int> treeTopSort(const vector<vector<int>>& adjList, int root = 1) { // 默认根为1； 参数是树的邻接表；
     queue<int>q;
