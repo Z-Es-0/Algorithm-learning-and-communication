@@ -1,102 +1,98 @@
-/*
- * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
- * @Date: 2024-08-02 13:17:21
- * @LastEditors: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
- * @LastEditTime: 2024-08-02 13:17:27
- * @FilePath: \Algorithm-learning-and-communication\算法模板cpp\树状数组构建.cpp
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 #include <iostream>
 #include <vector>
+#define lowbit(x) (x & (-x))
+using namespace std;
 
 class FenwickTree {
 private:
-    std::vector<int> bit; // 树状数组
+    vector<int> tree;
+    vector<int> original;
     int n;
-
-    // 内部方法，在给定索引更新值
-    void add(int idx, int val) {
-        while (idx <= n) {
-            bit[idx] += val;
-            idx += idx & -idx; // 移动到下一个索引
-        }
-    }
-
-public:
-    // 构造函数，初始化树状数组大小
-    FenwickTree(int size) {
-        this->n = size;
-        bit.assign(n + 1, 0); // 初始化树状数组为0
-    }
-
-    // 方法：从给定的向量构建树状数组
-    void build_tree(const std::vector<int>& s) {
-        n = s.size();
-        bit.assign(n + 1, 0); // 重置树状数组为新大小
-
-        // 用给定向量的值更新树状数组
+    // 构建树状数组
+    vector<int> buildTree(const vector<int>& s) {
+        vector<int> tree(n + 1, 0);
+        vector<int> prefixSum(n + 1, 0);
         for (int i = 0; i < n; ++i) {
-            add(i + 1, s[i]);
+            int x = i + 1;
+            prefixSum[x] = prefixSum[x - 1] + s[i];
+            tree[x] = prefixSum[x] - prefixSum[x - lowbit(x)];
         }
+        return tree;
     }
 
-    // 方法：获取从1到idx的前缀和
-    int prefixSum(int idx) const {
+    // 计算前缀和
+    int findPrefixSum(int x) const {
         int sum = 0;
-        while (idx > 0) {
-            sum += bit[idx];
-            idx -= idx & -idx; // 移动到父节点
+        while (x != 0) {
+            sum += tree[x];
+            x -= lowbit(x);
         }
         return sum;
     }
 
-    // 方法：获取[left, right]区间的和
-    int rangeSum(int left, int right) const {
-        return prefixSum(right) - prefixSum(left - 1);
-    }
+public:
+    // 构造函数
+    FenwickTree(const vector<int>& s) {
+        n = s.size();
+        original = s;
+        vector<int> g;
+        int last = 0;
 
-    // 方法：获取索引idx处的原始值（1基索引）
-    int pointQuery(int idx) const {
-        return rangeSum(idx, idx);
-    }
-
-    // 方法：更新树状数组在索引idx处的值
-    void update(int idx, int val) {
-        add(idx, val);
-    }
-
-    // 调试方法：打印树状数组
-    void printBIT() const {
-        for (int i = 1; i <= n; ++i) {
-            std::cout << bit[i] << " ";
+        // 构造差分数组
+        for (int si : s) {
+            g.push_back(si - last);
+            last = si;
         }
-        std::cout << std::endl;
+
+        // 初始化树状数组
+        tree = buildTree(g);
+    }
+
+    // 单点增加操作
+    void addOne(int x, int i) {
+        while (i < tree.size()) {
+            tree[i] += x;
+            i += lowbit(i);
+        }
+    }
+
+    // 区间更新：在区间 [x, y] 增加 k
+    void rangeUpdate(int x, int y, int k) {
+        addOne(k, x);
+        addOne(-k, y + 1);
+    }
+
+    // 单点查询
+    int pointQuery(int x) const {
+        return findPrefixSum(x);
+    }
+
+    // 区间和查询
+    int rangeQuery(int l, int r) const {
+        return findPrefixSum(r) - findPrefixSum(l - 1);
     }
 };
 
-// 示例使用
 int main() {
-    // 示例向量
-    std::vector<int> s = {1, 2, 3, 4, 5};
-    FenwickTree fenwickTree(s.size());
+    int n, m;
+    cin >> n >> m;
+    vector<int> s(n);
+    for (int& si : s) cin >> si;
 
-    // 使用向量s构建树状数组
-    fenwickTree.build_tree(s);
+    // 创建树状数组对象
+    FenwickTree fenwick(s);
 
-    // 打印树状数组的内部状态（用于调试）
-    std::cout << "构建后的树状数组状态: ";
-    fenwickTree.printBIT();
-
-    // 查询区间 [1, 3] 的和
-    std::cout << "区间 [1, 3] 的和: " << fenwickTree.rangeSum(1, 3) << std::endl;
-
-    // 更新索引3处的值，增加5
-    fenwickTree.update(3, 5);
-    std::cout << "索引3更新后的树状数组状态: ";
-    fenwickTree.printBIT();
-
-    // 更新后再次查询
-    std::cout << "更新后区间 [1, 3] 的和: " << fenwickTree.rangeSum(1, 3) << std::endl;
-
+    // 处理操作
+    for (int i = 0; i < m; ++i) {
+        int a, x;
+        cin >> a >> x;
+        if (a == 1) {
+            int y, k;
+            cin >> y >> k;
+            fenwick.rangeUpdate(x, y, k);
+        } else {
+            cout << fenwick.pointQuery(x) << endl;
+        }
+    }
     return 0;
 }
