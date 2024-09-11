@@ -1,3 +1,11 @@
+#include <bits/stdc++.h>
+//using namespace std;
+//#define int long long
+#define lowbit(x) (x & (-x))
+#define N 100005
+#define MOD (1e9+7)
+int t,n;
+
 class FenwickTree {
 private:
     std::vector<int> bit;
