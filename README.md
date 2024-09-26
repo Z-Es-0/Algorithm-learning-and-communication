@@ -2,7 +2,7 @@
  * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
  * @Date: 2024-01-28 20:03:21
  * @LastEditors: Z-Es-0 zes18642300628@qq.com
- * @LastEditTime: 2024-09-16 21:49:47
+ * @LastEditTime: 2024-09-26 19:12:02
  * @FilePath: \Algorithm-learning-and-communication\README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -37,9 +37,9 @@
 
 ## 24暑假集训
 
-这里的题目是codeforces 中 1400 - 2600 难度的题目 ，大多数是1600左右； 大多数难度一般；
+这里的题目是codeforces 中 1400 - 2600 难度的题目 ，大多数是1600左右；难度一般；
 
 适合 对算法不熟练的选手，需要一点点思维和算法相结合;
 
-如果您codeforces rating 在 1300/1400 寻找进步，这些很适合您；
+
 
