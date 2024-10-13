@@ -1,11 +1,12 @@
 /*
- * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
+ * @Author: Z-Es-0 zes18642300628@qq.com
  * @Date: 2024-08-26 22:01:23
- * @LastEditors: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
- * @LastEditTime: 2024-08-26 22:07:30
- * @FilePath: \Algorithm-learning-and-communication\算法模板cpp\线段树专辑\普通线段树(区间查询\区间修改).cpp
+ * @LastEditors: Z-Es-0 zes18642300628@qq.com
+ * @LastEditTime: 2024-10-09 21:06:09
+ * @FilePath: \Algorithm-learning-and-communication\算法模板cpp\数据结构\普通线段树.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
+
 #include <iostream>
 #include <vector>
 
