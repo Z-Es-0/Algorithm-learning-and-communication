@@ -1,4 +1,12 @@
 /*
+ * @Author: Z-Es-0 zes18642300628@qq.com
+ * @Date: 2024-08-23 10:08:17
+ * @LastEditors: Z-Es-0 zes18642300628@qq.com
+ * @LastEditTime: 2024-10-30 13:28:44
+ * @FilePath: \Algorithm-learning-and-communication\算法模板cpp\数学\欧拉筛.cpp
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+/*
  * @Author: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
  * @Date: 2024-08-23 10:08:17
  * @LastEditors: Z-Es-0 141395766+Z-Es-0@users.noreply.github.com
