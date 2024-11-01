@@ -28,7 +28,7 @@
 
 [图论](https://github.com/Z-Es-0/Basic-Algorithm-Notes/tree/main/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA)
 
-## 青春猪鼻少年
+## 23
 
 我最菜的时期通过训练1200左右难度的简单思维题让自己有了简单的思维能力；
 
