@@ -1,5 +1,5 @@
 # P1896 [SCOI2005] 互不侵犯
-
+[P1896 [SCOI2005] 互不侵犯 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)](https://www.luogu.com.cn/problem/P1896)
 ## 问题描述
 
 # [SCOI2005] 互不侵犯
